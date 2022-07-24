@@ -1,0 +1,25 @@
+name:
+uses:
+import java.util.Random;
+
+public class hello {
+    public static void main(String[] args) {
+        char a[]=new char[52];
+        for (int i = 0; i < a.length; i++) {
+            if(i<=25){
+                a[i]=(char)(i+97);
+            }else{
+                a[i]=(char)(65+i-26);
+            }
+        }
+        String sum ="";
+        Random r = new Random();
+        for (int i = 0; i < 4; i++) {
+            int randomindex=r.nextInt(a.length);
+            sum=sum+a[randomindex];
+        }
+        int num=r.nextInt(10);
+        sum=sum+num;
+        System.out.println(sum);
+    }
+}
